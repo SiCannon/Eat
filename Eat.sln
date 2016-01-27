@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eat", "Eat\Eat.csproj", "{854A5885-02AA-4273-8316-0ECC64D33D0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eat.IntegrationTests", "Eat.IntegrationTests\Eat.IntegrationTests.csproj", "{4691C16D-EE27-470F-8BA1-364FD2430140}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eat.UnitTests", "Eat.UnitTests\Eat.UnitTests.csproj", "{92884BF1-51BB-45D9-B07B-3E871CEEE058}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{854A5885-02AA-4273-8316-0ECC64D33D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{854A5885-02AA-4273-8316-0ECC64D33D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{854A5885-02AA-4273-8316-0ECC64D33D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{854A5885-02AA-4273-8316-0ECC64D33D0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4691C16D-EE27-470F-8BA1-364FD2430140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4691C16D-EE27-470F-8BA1-364FD2430140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4691C16D-EE27-470F-8BA1-364FD2430140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4691C16D-EE27-470F-8BA1-364FD2430140}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92884BF1-51BB-45D9-B07B-3E871CEEE058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92884BF1-51BB-45D9-B07B-3E871CEEE058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92884BF1-51BB-45D9-B07B-3E871CEEE058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92884BF1-51BB-45D9-B07B-3E871CEEE058}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

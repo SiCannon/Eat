@@ -1,0 +1,36 @@
+﻿<div ng-show="isGotData()">
+    <form novalidate name="foodDetailForm" autocomplete="off">
+        <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" ng-model="food.Name" name="Name" autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label>Quantity</label>
+            <input class="form-control" ng-model="food.Quantity" name="Quantity" type="number">
+        </div>
+
+        <div class="form-group">
+            <label>Calories</label>
+            <input class="form-control" ng-model="food.Calories" name="Calories" type="number">
+        </div>
+
+        <div>
+            <button class="btn btn-primary" ng-click="Submit(true)" type="submit">Save</button>
+            <button class="btn btn-default" ng-click="Submit(false)">Apply</button>
+            <button class="btn btn-default" ng-click="GoBack()">Cancel</button>
+        </div>
+    </form>
+</div>
+
+<div ng-show="isLoading()">
+    @Html.Partial("Loading")
+</div>
+
+<div ng-show="isNotFound()">
+    <div class="alert alert-danger">
+        <strong>That Food was not found!</strong>
+    </div>
+    <button class="btn btn-default" ng-click="GoBack()">Go Back</button>
+</div>
+

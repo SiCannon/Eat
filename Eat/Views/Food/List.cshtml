@@ -1,0 +1,32 @@
+﻿<a style="float: right" class="btn btn-primary" href="#/food/new">New</a>
+
+<div ng-show="noData()">
+    no data
+</div>
+
+<div ng-show="loading">
+    @Html.Partial("Loading")
+</div>
+
+<div class="foodlist">
+    <div ng-repeat="food in foods" class="item">
+        <div class="title">
+            <a href="#/food/{{food.FoodId}}" class="name" >{{food.Name}}</a>
+            <span class="brand">{{food.Brand}}</span>
+        </div>
+        <div class="details">
+            <span class="calories">{{food.Calories}}</span> calories per <span class="quantity">{{food.Quantity}}g</span>
+        </div>
+    </div>
+</div>
+
+<div id="debug" style="position: fixed; left: 0px; top: 100px; border: 1px solid red; background-color: white; color: black; width: 200px; height: 100px">???</div>
+
+<script>
+    //$(document).ready(function () {
+        $(window).scroll(function () {
+            debgugger;
+            $("#debug").text($(window).scrollTop());
+        });
+    //});
+</script>

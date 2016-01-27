@@ -1,0 +1,84 @@
+﻿@import (reference) "bootstrap/less/variables.less";
+
+body {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    overflow-y: scroll;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+@expander-height: 40px;
+@expander-width: 40px;
+@expander-thickness: 3px;
+@expander-color: #ddd;
+
+.expander {
+
+    margin-top: 5px;
+    height: @expander-height;
+    width: @expander-width;
+    border: @expander-thickness solid @expander-color;
+
+    .inner {
+        height: @expander-height - 25;
+        border-top: @expander-thickness solid @expander-color;
+        border-bottom: @expander-thickness solid @expander-color;
+        margin-top: 10px;
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+}
+
+.my-navbar-toggle {
+    @media (min-width: @grid-float-breakpoint) {
+        display: none;
+    }
+}
+
+.loading {
+    color: @brand-primary;
+    width: 120px;
+    height: 50px;
+    background-color: @btn-default-bg;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    i {
+        margin-right: 10px;
+    }
+}
+
+.foodlist {
+    .item {
+        a.name {
+            font-size: x-large;
+            color: #ccc;
+        }
+        span.brand {
+            color: @brand-info;
+            margin-left: 4px;
+        }
+        .details {
+            font-size: small;
+            .calories {
+                font-weight: bold;
+            }
+            .quantity {
+                font-weight: bold;
+            }
+        }
+    }
+}

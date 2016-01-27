@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat</title>
+
+    @Styles.Render("~/Content/less")
+    @Scripts.Render("~/bundles/ang")
+    @Scripts.Render("~/bundles/eat")
+
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavbarCtrl">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("(eat)", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <p class="my-navbar-toggle navbar-text">{{root}}</p>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Diary</a></li>
+                    <li ng-class="{ active: root == 'Food' }"><a href="~/#/food">Food</a></li>
+                    <li><a href="#">Meals</a></li>
+                    <li><a href="/Data/Index">Data</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/common")
+
+</body>
+</html>

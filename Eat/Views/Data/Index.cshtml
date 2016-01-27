@@ -1,0 +1,38 @@
+﻿@if (TempData["message"] != null)
+{
+    <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+        @TempData["message"]
+    </div>
+}
+
+<style>
+    .buttons form {
+        display: inline;
+    }
+</style>
+
+<div class="buttons">
+
+    @using (Html.BeginForm("CreateFood", "Data"))
+    {
+        <button class="btn btn-default" type="submit">Create Food</button>
+    }
+    
+    @using (Html.BeginForm("DeleteAllFood", "Data", FormMethod.Post, new { @class = "delete" }))
+    {
+        <button id="DeleteAllFoodButton" class="btn btn-default" type="button" onclick="DeleteClicked()">Delete All Food</button>
+        <button id="ReallyDeleteAllFoodButton" class="btn btn-danger" type="submit" style="display: none">Really Delete All Food!?</button>
+    }
+
+</div>
+
+<script>
+
+    function DeleteClicked() {
+        $("#DeleteAllFoodButton").hide();
+        $("#ReallyDeleteAllFoodButton").show();
+        return false;
+    }
+
+</script>
